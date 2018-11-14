@@ -50,9 +50,9 @@ while x<10:
         z=0
         while(z<10):
             
-            img1 = cv2.imread(str(x)+'.jpg')
-            img2 = cv2.imread(str(y)+'.jpg')
-            img3 = cv2.imread(str(z)+'.jpg')  
+            img1 = cv2.imread("/content/urdu-training-dataset/Images/"+str(x)+'.jpg')
+            img2 = cv2.imread("/content/urdu-training-dataset/Images/"+str(y)+'.jpg')
+            img3 = cv2.imread("/content/urdu-training-dataset/Images/"+str(z)+'.jpg')  
             vis = np.concatenate((img1, img2,img3), axis=1)
             cv2.imwrite(str(x)+str(y)+str(z)+'.png', vis)
             with open(str(x)+str(y)+str(z)+'.gt.txt', 'w',encoding="utf-8") as f:
@@ -83,10 +83,10 @@ while x<10:
             w=0
             while(w<10):
             
-                img1 = cv2.imread(str(x)+'.jpg')
-                img2 = cv2.imread(str(y)+'.jpg')
-                img3 = cv2.imread(str(z)+'.jpg')
-                img4 = cv2.imread(str(w)+'.jpg')
+                img1 = cv2.imread("/content/urdu-training-dataset/Images/"+str(x)+'.jpg')
+                img2 = cv2.imread("/content/urdu-training-dataset/Images/"+str(y)+'.jpg')
+                img3 = cv2.imread("/content/urdu-training-dataset/Images/"+str(z)+'.jpg')
+                img4 = cv2.imread("/content/urdu-training-dataset/Images/"+str(w)+'.jpg')
             
                 vis = np.concatenate((img1, img2,img3,img4), axis=1)
                 cv2.imwrite(str(x)+str(y)+str(z)+str(w)+'.png', vis)
