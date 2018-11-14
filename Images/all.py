@@ -19,8 +19,8 @@ y=0
 while x<10:
     y=0
     while y<10:
-        img1 = cv2.imread("/content/urdu-training-dataset/Images"+str(x)+'.jpg')
-        img2 = cv2.imread("/content/urdu-training-dataset/Images" +str(y)+'.jpg')
+        img1 = cv2.imread("/content/urdu-training-dataset/Images/"+str(x)+'.jpg')
+        img2 = cv2.imread("/content/urdu-training-dataset/Images/" +str(y)+'.jpg')
         vis = np.concatenate((img1, img2), axis=1)
         cv2.imwrite(str(x)+str(y)+ '.png', vis)
         with open(str(x)+str(y)+'.gt.txt', 'w',encoding="utf-8") as f:
